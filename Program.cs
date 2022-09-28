@@ -35,8 +35,14 @@ string [] GetAllStringsBySize(string [] msg, int size)
 
 void PrintStringArray(string [] txt)
 {
-for (int i = 0; i < txt.Length; i++)
-Console.Write(txt[i]+" ");
+    for (int i = 0; i < txt.Length; i++)
+    {
+        Console.BackgroundColor = (ConsoleColor)(1);
+        Console.ForegroundColor = (ConsoleColor)(12);
+        Console.Write(txt[i]);
+        Console.ResetColor();
+        Console.Write(" ");
+    }
 }
 
 
