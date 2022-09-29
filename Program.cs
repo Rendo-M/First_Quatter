@@ -16,7 +16,7 @@ int CountSameSizeElement(string [] msg, int size)
 {
     int count = 0;
     for (int i = 0; i < msg.Length; i++)
-        count += Convert.ToByte(msg[i].Length == size);
+        count += Convert.ToByte(msg[i].Length <= size);
     return count;
 }
 
@@ -25,7 +25,7 @@ string [] GetAllStringsBySize(string [] msg, int size)
     string [] result = new string[CountSameSizeElement(msg, size)];
     int count  = 0;
     for (int i = msg.Length-1; i >= 0; i--)
-        if (msg[i].Length == size)
+        if (msg[i].Length <= size)
             {
                 result[count] = msg[i];
                 count++;
